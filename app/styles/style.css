@@ -6,11 +6,12 @@ SUMMARY
 3. Helpers
 4. Header
 5. Footer
-6. Today
-7. History
-8. Exchange
-9. Retail
-10. Media queries
+6. Nav
+7. Today
+8. History
+9. Exchange
+10. Retail
+11. Media queries
 BEM : Block, Element, Modifier
 */
 /* 0. Custom propierties
@@ -131,7 +132,17 @@ nav {
   text-align: center;
   padding: 0.1rem;
 }
-/* 6. Today
+/* 6. Nav
+================================ */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  text-transform: capitalize;
+}
+.nav a {
+  padding: 1rem;
+}
+/* 7. Today
 ================================ */
 .today {
   text-align: center;
@@ -148,7 +159,7 @@ nav {
 }
 .today__currency {
 }
-/* 7. History
+/* 8. History
 ================================ */
 .history {
   font-size: var(--f-size-s);
@@ -169,7 +180,7 @@ nav {
 .history tr:hover {
   background-color: var(--light);
 }
-/* 8. Exchange
+/* 9. Exchange
 ================================ */
 .exchange {
 }
@@ -203,7 +214,8 @@ nav {
 .exchange__form input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
 }
-.exchange__form input:focus {
+.exchange__form input:focus,
+.exchange__btn:focus {
   outline: none;
 }
 .exchange__btn {
@@ -221,22 +233,38 @@ nav {
   color: var(--dark);
   transition: 0.2s ease-in-out;
 }
-/* 9. Retail
+/* 10. Retail
 ================================ */
 .retail {
   margin: auto;
   font-size: var(--f-size-s);
+  width: min(100%, 80rem);
+  border-collapse: collapse;
+}
+.retail caption {
+  margin: 1.6rem;
+}
+.retail th {
+  background-color: var(--light);
+  color: var(--dark);
+}
+.retail th,
+.retail td {
+  text-align: center;
+  padding: 0.5rem;
+  border-bottom: 0.1rem solid var(--light);
 }
 .retail__flag {
   width: 4rem;
 }
-/* 10. Media queries
+/* 11. Media queries
 ================================ */
 @media screen and (min-width: 480px) {
   .container {
     max-width: 420px;
   }
-  .history {
+  .history,
+  .retail {
     font-size: var(--f-size-base);
   }
 }
@@ -252,16 +280,35 @@ nav {
     width: 16rem;
     margin-right: 0;
   }
+  .retail td {
+    padding: 1rem;
+  }
+  .retail__flag {
+    width: 6rem;
+  }
 }
 
 @media screen and (min-width: 1024px) {
   .container {
     max-width: 960px;
   }
+  .retail {
+    font-size: var(--f-size-l);
+  }
+  .retail__flag {
+    width: 8rem;
+  }
 }
 
 @media screen and (min-width: 1200px) {
   .container {
     max-width: 1140px;
+  }
+  .retail {
+    font-size: var(--f-size-xl);
+    font-weight: var(--f-weight-m);
+  }
+  .retail__flag {
+    width: 10rem;
   }
 }
