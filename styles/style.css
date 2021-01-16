@@ -8,7 +8,9 @@ SUMMARY
 5. Footer
 6. Today
 7. History
-Media queries
+8. Exchange
+9. Retail
+10. Media queries
 BEM : Block, Element, Modifier
 */
 /* 0. Custom propierties
@@ -68,9 +70,9 @@ a:active {
 img {
   width: 100%;
 }
-table {
-  font-size: var(--f-size-s);
-  margin: auto;
+nav {
+  text-align: center;
+  padding: 1rem;
 }
 /* 2. Globals
 ================================ */
@@ -82,6 +84,7 @@ table {
   font-size: var(--f-size-l);
   font-weight: var(--f-weight-m);
   text-align: center;
+  text-transform: capitalize;
 }
 /* 3. Helpers
 ================================ */
@@ -112,6 +115,8 @@ table {
 .header__dev {
   align-self: flex-end;
   margin: 0;
+  font-size: var(--f-size-base);
+  font-weight: var(--f-weight-base);
 }
 .header__call {
   align-self: flex-end;
@@ -144,8 +149,35 @@ table {
 /* 7. History
 ================================ */
 .history {
+  font-size: var(--f-size-s);
+  margin: auto;
 }
-/* Media queries
+/* 8. Exchange
+================================ */
+.exchange {
+}
+.exchange__hint {
+  font-size: var(--f-size-s);
+  padding: 0.5rem;
+}
+.exchange__form {
+}
+.exchange__in {
+  width: 26rem;
+}
+.exchange__btn {
+  width: 26rem;
+  margin: 1rem 0;
+}
+/* 9. Retail
+================================ */
+.retail {
+  margin: auto;
+}
+.retail__flag {
+  width: 4rem;
+}
+/* 10. Media queries
 ================================ */
 @media screen and (min-width: 480px) {
   .container {

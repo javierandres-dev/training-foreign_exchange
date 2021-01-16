@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="./styles/normalize.css" />
     <link rel="preload" href="./styles/style.css" as="style" />
     <link rel="stylesheet" href="./styles/style.css" />
-    <title></title>
+    <title>Money exchange</title>
   </head>
   <body>
     <header class="header">
@@ -44,8 +44,62 @@
       </h2>
       <p class="header__call">Found a bug or have an idea? Contact me</p>
     </header>
-    <main role="main" class="container"></main>
-    <nav><a href="index.html">Back</a></nav>
+    <main role="main" class="container">
+      <section class="exchage">
+        <h3 class="title">money exchange</h3>
+        <form class="exchange__form">
+          <fieldset>
+            <legend class="exchange__hint">
+              Set the prices and press the show button
+            </legend>
+            <label for="buyUsd">Buy US Dollar</label>
+            <input type="number" id="buyUsd" class="exchange__in" />
+            <label for="sellUsd">Sell US Dollar</label>
+            <input type="number" id="sellUsd" class="exchange__in" />
+            <label for="buyEur">Buy Euro</label>
+            <input type="number" id="buyEur" class="exchange__in" />
+            <label for="sellEur">Sell Euro</label>
+            <input type="number" id="sellEur" class="exchange__in" />
+            <button type="submit" class="exchange__btn">Show</button>
+          </fieldset>
+        </form>
+      </section>
+    </main>
+    <aside class="container">
+      <table id="retail" class="retail">
+        <caption class="title">
+          retail
+        </caption>
+        <thead>
+          <tr>
+            <th></th>
+            <th>Currency</th>
+            <th>We buy</th>
+            <th>We sell</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="retail__flag">
+              <img src="images/usa-.png" alt="usa flag" />
+            </td>
+            <td>US Dollar</td>
+            <td id="weBuyUsd"></td>
+            <td id="weSellUsd"></td>
+          </tr>
+          <tr>
+            <td class="retail__flag">
+              <img src="images/eur-.png" alt="euro flag" />
+            </td>
+            <td>Euro</td>
+            <td id="weBuyEur"></td>
+            <td id="weSellEur"></td>
+          </tr>
+        </tbody>
+        <tfoot></tfoot>
+      </table>
+    </aside>
+    <nav><a href="index.html">Home</a></nav>
     <footer class="footer">
       <p>
         <a

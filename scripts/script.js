@@ -69,3 +69,10 @@ const printHistory = (start) => {
     $tbody.appendChild($tr);
   }
 };
+d.addEventListener("click", (e) => {
+  e.preventDefault();
+  console.log(e);
+});
+/*
+https://www.datos.gov.co/Econom-a-y-Finanzas/Tasa-de-Cambio-Representativa-del-Mercado-Historic/mcec-87by
+*/
