@@ -137,6 +137,8 @@ nav {
   text-align: center;
 }
 .today__flags {
+  width: min(100%, 48rem);
+  margin: auto;
   display: flex;
   justify-content: space-evenly;
 }
@@ -150,7 +152,22 @@ nav {
 ================================ */
 .history {
   font-size: var(--f-size-s);
+  width: min(100%, 48rem);
   margin: auto;
+  border-collapse: collapse;
+}
+.history th {
+  background-color: var(--lightgreen);
+  color: var(--white);
+}
+.history th,
+.history td {
+  text-align: center;
+  padding: 0.2rem;
+  border-bottom: 0.1rem solid var(--light);
+}
+.history tr:hover {
+  background-color: var(--light);
 }
 /* 8. Exchange
 ================================ */
@@ -159,20 +176,56 @@ nav {
 .exchange__hint {
   font-size: var(--f-size-s);
   padding: 0.5rem;
+  text-align: center;
 }
 .exchange__form {
+  width: min(100%, 48rem);
+  margin: auto;
 }
-.exchange__in {
-  width: 26rem;
+.exchange__form fieldset {
+  border: 0.1rem solid var(--lightgreen);
+}
+.exchange__form label,
+.exchange__form input,
+.exchange__btn {
+  display: block;
+}
+.exchange__form label {
+  margin-top: 0;
+}
+.exchange__form input {
+  width: 100%;
+  margin-bottom: 1rem;
+  border: none;
+  border-bottom: 0.1rem solid var(--lightgreen);
+}
+.exchange__form input[type="number"]::-webkit-inner-spin-button,
+.exchange__form input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+.exchange__form input:focus {
+  outline: none;
 }
 .exchange__btn {
-  width: 26rem;
-  margin: 1rem 0;
+  width: 100%;
+  margin: 2rem auto 1rem;
+  border: none;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: var(--dark);
+  color: var(--light);
+}
+.exchange__btn:hover {
+  cursor: pointer;
+  background-color: var(--light);
+  color: var(--dark);
+  transition: 0.2s ease-in-out;
 }
 /* 9. Retail
 ================================ */
 .retail {
   margin: auto;
+  font-size: var(--f-size-s);
 }
 .retail__flag {
   width: 4rem;
@@ -183,11 +236,21 @@ nav {
   .container {
     max-width: 420px;
   }
+  .history {
+    font-size: var(--f-size-base);
+  }
 }
 
 @media screen and (min-width: 768px) {
   .container {
     max-width: 720px;
+  }
+  .history td {
+    padding: 0.5rem;
+  }
+  .exchange__btn {
+    width: 16rem;
+    margin-right: 0;
   }
 }
 

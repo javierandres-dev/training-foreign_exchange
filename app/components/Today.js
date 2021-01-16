@@ -7,12 +7,12 @@ export default function Today() {
 <div class="today__flags">
   <figure class="today__flag">
     <img src="app/images/usa.png" alt="USD" />
-    <figcaption class="today__currency">US Dollar $1</figcaption>
+    <figcaption class="today__currency">$1 US Dollar</figcaption>
   </figure>
   <figure class="today__flag">
     <img src="app/images/col.png" alt="COP" />
     <figcaption class="today__currency">
-      COP $<span id="value"></span>
+      $<span id="value"></span> COP
     </figcaption>
   </figure>
 </div>
