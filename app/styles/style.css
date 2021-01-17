@@ -135,6 +135,9 @@ img {
   color: var(--light);
   text-align: center;
   padding: 0.1rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 /* 7. Today
 ================================ */
@@ -261,7 +264,6 @@ img {
     font-size: var(--f-size-base);
   }
 }
-
 @media screen and (min-width: 768px) {
   .container {
     max-width: 720px;
@@ -286,7 +288,6 @@ img {
     width: 6rem;
   }
 }
-
 @media screen and (min-width: 1024px) {
   .container {
     max-width: 960px;
@@ -298,7 +299,6 @@ img {
     width: 8rem;
   }
 }
-
 @media screen and (min-width: 1200px) {
   .container {
     max-width: 1140px;
