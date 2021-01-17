@@ -15,7 +15,9 @@ export default function History() {
     </tr>
   </thead>
   <tbody></tbody>
-  <tfoot></tfoot>
+  <tfoot>
+    <tr><td colspan="4" id="pages"></td></tr>
+  </tfoot>
 </table>
   `;
   return $history;

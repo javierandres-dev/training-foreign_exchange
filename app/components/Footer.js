@@ -5,7 +5,7 @@ export default function Footer() {
   $footer.innerHTML = `
 <p>
   <a
-    href="http://www.javierandresgp.com"
+    href="https://www.javierandresgp.com"
     target="_blank"
     rel="noopener noreferrer"
     >&copy; Javier Andrés GP</a

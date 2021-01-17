@@ -26,10 +26,12 @@ export function printHistory(start) {
   let i = start;
   const end = start + itemsXpage,
     $history = d.getElementById("history"),
+    $pages = d.getElementById("pages"),
     $caption = $history.querySelector("caption"),
     $tbody = $history.querySelector("tbody");
   page = end / itemsXpage;
-  $caption.textContent = `Page ${page} of ${pages}`;
+  $caption.textContent = `Page ${page}`;
+  $pages.textContent = `Page ${page} of ${pages} pages`;
   for (i; i < end; i++) {
     const trm = tcrmh[i],
       value =

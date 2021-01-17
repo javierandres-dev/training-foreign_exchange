@@ -1,7 +1,7 @@
 "use strict";
 export default function Retail() {
-  const $retail = document.createElement("table");
-  $retail.setAttribute("id", "retail");
+  const date = new Date().toLocaleString(),
+    $retail = document.createElement("table");
   $retail.classList.add("retail");
   $retail.innerHTML = `
 <caption class="title">
@@ -32,7 +32,9 @@ export default function Retail() {
     <td id="weSellEur"></td>
   </tr>
 </tbody>
-<tfoot></tfoot>
+<tfoot>
+  <tr><td colspan="4">Last update ${date}</td></tr>
+</tfoot>
   `;
   return $retail;
 }

@@ -5,14 +5,13 @@ SUMMARY
 2. Globals
 3. Helpers
 4. Header
-5. Footer
-6. Nav
+5. Nav
+6. Footer
 7. Today
 8. History
 9. Exchange
 10. Retail
 11. Media queries
-BEM : Block, Element, Modifier
 */
 /* 0. Custom propierties
 ================================ */
@@ -26,8 +25,6 @@ BEM : Block, Element, Modifier
   --f-size-base: 1.6rem;
   --f-size-l: 1.9rem;
   --f-size-xl: 2.2rem;
-  --black: #000000;
-  --white: #ffffff;
   --green: #325654;
   --lightgreen: #bec9b7;
   --dark: #333533;
@@ -61,6 +58,7 @@ a:link {
 }
 a:visited {
   font-style: italic;
+  color: var(--lightgreen);
 }
 a:hover {
   text-decoration: underline;
@@ -70,10 +68,6 @@ a:active {
 }
 img {
   width: 100%;
-}
-nav {
-  text-align: center;
-  padding: 1rem;
 }
 /* 2. Globals
 ================================ */
@@ -89,14 +83,14 @@ nav {
 }
 /* 3. Helpers
 ================================ */
-.m-0 {
-  margin: 0;
-}
-.p-0 {
-  padding: 0;
-}
-.t-a-center {
+.warning {
+  padding: 1rem;
+  background-color: var(--light);
+  color: var(--dark);
   text-align: center;
+  border-radius: 1rem;
+  width: min(100%, 48rem);
+  margin: 1rem auto;
 }
 /* 4. Header
 ================================ */
@@ -107,32 +101,24 @@ nav {
   flex-direction: column;
   padding: 1rem;
 }
-.header__title {
+.header h1 {
   font-size: var(--f-size-xl);
   font-weight: var(--f-weight-m);
   align-self: center;
   text-transform: uppercase;
 }
-.header__dev {
+.header h2 {
   align-self: flex-end;
   margin: 0;
   font-size: var(--f-size-base);
   font-weight: var(--f-weight-base);
 }
-.header__call {
+.header p {
   align-self: flex-end;
   font-size: var(--f-size-s);
   margin: 0;
 }
-/* 5. Footer
-================================ */
-.footer {
-  background-color: var(--green);
-  color: var(--light);
-  text-align: center;
-  padding: 0.1rem;
-}
-/* 6. Nav
+/* 5. Nav
 ================================ */
 .nav {
   display: flex;
@@ -141,6 +127,14 @@ nav {
 }
 .nav a {
   padding: 1rem;
+}
+/* 6. Footer
+================================ */
+.footer {
+  background-color: var(--green);
+  color: var(--light);
+  text-align: center;
+  padding: 0.1rem;
 }
 /* 7. Today
 ================================ */
@@ -153,11 +147,12 @@ nav {
   display: flex;
   justify-content: space-evenly;
 }
-.today__flag {
+.today figure {
   margin: 0;
   max-width: 10rem;
 }
-.today__currency {
+.today figcaption {
+  font-weight: var(--f-weight-m);
 }
 /* 8. History
 ================================ */
@@ -183,42 +178,40 @@ nav {
 /* 9. Exchange
 ================================ */
 .exchange {
+  width: min(100%, 48rem);
+  margin: 2rem auto;
 }
-.exchange__hint {
+.exchange legend {
   font-size: var(--f-size-s);
   padding: 0.5rem;
   text-align: center;
 }
-.exchange__form {
-  width: min(100%, 48rem);
-  margin: auto;
-}
-.exchange__form fieldset {
+.exchange fieldset {
   border: 0.1rem solid var(--lightgreen);
 }
-.exchange__form label,
-.exchange__form input,
-.exchange__btn {
+.exchange label,
+.exchange input,
+.exchange button {
   display: block;
 }
-.exchange__form label {
+.exchange label {
   margin-top: 0;
 }
-.exchange__form input {
+.exchange input {
   width: 100%;
   margin-bottom: 1rem;
   border: none;
   border-bottom: 0.1rem solid var(--lightgreen);
 }
-.exchange__form input[type="number"]::-webkit-inner-spin-button,
-.exchange__form input[type="number"]::-webkit-outer-spin-button {
+.exchange input[type="number"]::-webkit-inner-spin-button,
+.exchange input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
 }
-.exchange__form input:focus,
-.exchange__btn:focus {
+.exchange input:focus,
+.exchange button:focus {
   outline: none;
 }
-.exchange__btn {
+.exchange button {
   width: 100%;
   margin: 2rem auto 1rem;
   border: none;
@@ -227,7 +220,7 @@ nav {
   background-color: var(--dark);
   color: var(--light);
 }
-.exchange__btn:hover {
+.exchange button:hover {
   cursor: pointer;
   background-color: var(--light);
   color: var(--dark);
@@ -273,10 +266,16 @@ nav {
   .container {
     max-width: 720px;
   }
+  .today figure {
+    max-width: 12rem;
+  }
+  .today figcaption {
+    font-size: var(--f-size-l);
+  }
   .history td {
     padding: 0.5rem;
   }
-  .exchange__btn {
+  .exchange button {
     width: 16rem;
     margin-right: 0;
   }

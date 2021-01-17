@@ -27,5 +27,5 @@ export default function printPrices(buyUsd, sellUsd, buyEur, sellEur) {
       "." +
       sellEur.substring(1, sellEur.length).replace(".", ",")
     } COP`;
-  }, 0);
+  }, 1000);
 }

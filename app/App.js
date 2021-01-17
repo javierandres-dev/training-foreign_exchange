@@ -9,9 +9,9 @@ export default function App() {
   const $body = document.querySelector("body");
   $body.innerHTML = null;
   $body.appendChild(Header());
+  $body.appendChild(Nav());
   $body.appendChild(Main());
   $body.appendChild(Aside());
-  $body.appendChild(Nav());
   $body.appendChild(Footer());
   Router();
 }

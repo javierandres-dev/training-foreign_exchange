@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
 const eventListeners = () => {
   document.addEventListener("click", (e) => {
     if (e.target.id === "btnRetail") {
+      e.preventDefault();
       setPrices();
     }
   });
