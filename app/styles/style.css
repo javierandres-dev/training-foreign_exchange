@@ -25,6 +25,7 @@ SUMMARY
   --f-size-base: 1.6rem;
   --f-size-l: 1.9rem;
   --f-size-xl: 2.2rem;
+  --lightblue: #05a6f1;
   --green: #325654;
   --lightgreen: #bec9b7;
   --dark: #333533;
@@ -94,29 +95,24 @@ img {
 }
 /* 4. Header
 ================================ */
-.header {
+.dev {
+  position: sticky;
+  top: 0;
   background-color: var(--green);
   color: var(--light);
-  display: flex;
-  flex-direction: column;
   padding: 1rem;
 }
-.header h1 {
-  font-size: var(--f-size-xl);
-  font-weight: var(--f-weight-m);
-  align-self: center;
-  text-transform: uppercase;
+.dev h1 {
+  text-align: center;
 }
-.header h2 {
-  align-self: flex-end;
-  margin: 0;
-  font-size: var(--f-size-base);
-  font-weight: var(--f-weight-base);
+.dev p {
+  text-align: right;
 }
-.header p {
-  align-self: flex-end;
+.dev p span {
   font-size: var(--f-size-s);
-  margin: 0;
+}
+.dev a:link {
+  color: var(--lightblue);
 }
 /* 5. Nav
 ================================ */
@@ -264,6 +260,10 @@ img {
 @media screen and (min-width: 768px) {
   .container {
     max-width: 720px;
+  }
+  .dev {
+    display: flex;
+    justify-content: space-between;
   }
   .today figure {
     max-width: 12rem;
