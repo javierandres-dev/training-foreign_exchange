@@ -12,6 +12,7 @@ SUMMARY
 9. Exchange
 10. Retail
 11. Media queries
+12. JAGP
 */
 /* 0. Custom propierties
 ================================ */
@@ -95,24 +96,14 @@ img {
 }
 /* 4. Header
 ================================ */
-.dev {
-  position: sticky;
-  top: 0;
+.ttitle {
+  margin: 0;
   background-color: var(--green);
   color: var(--light);
   padding: 1rem;
-}
-.dev h1 {
   text-align: center;
-}
-.dev p {
-  text-align: right;
-}
-.dev p span {
-  font-size: var(--f-size-s);
-}
-.dev a:link {
-  color: var(--lightblue);
+  text-transform: capitalize;
+  font-size: xx-large;
 }
 /* 5. Nav
 ================================ */
@@ -307,4 +298,40 @@ img {
   .retail__flag {
     width: 10rem;
   }
+}
+/* 12. JAGP
+================================ */
+.jagp {
+  margin: 0;
+  font-family: sans-serif;
+  color: gray;
+}
+.jagp a {
+  color: #05a6f1;
+}
+.jagp a:link {
+  text-decoration: none;
+}
+.jagp a:visited {
+  font-style: italic;
+}
+.jagp a:hover {
+  text-decoration: underline;
+}
+.jagp a:active {
+  font-style: italic;
+  text-decoration: underline;
+  color: gray;
+}
+.jagp h1,
+.jagp h2 {
+  margin: 0;
+  font-size: 16px;
+  padding: 8px 16px;
+}
+.jagp h1 {
+  text-align: left;
+}
+.jagp h2 {
+  text-align: right;
 }
