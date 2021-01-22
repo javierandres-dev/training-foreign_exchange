@@ -1,4 +1,5 @@
 "use strict";
+// set up the "exchange" view
 export default function Exchange() {
   const $exchange = document.createElement("section");
   $exchange.innerHTML = `

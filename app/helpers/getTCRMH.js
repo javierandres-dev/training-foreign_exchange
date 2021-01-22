@@ -1,4 +1,5 @@
 "use strict";
+// make a query API
 export default async function getTCRMH() {
   try {
     const resp = await fetch(

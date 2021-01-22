@@ -1,4 +1,5 @@
 "use strict";
+// set up the "today" view
 export default function Today() {
   const $today = document.createElement("section");
   $today.classList.add("today");

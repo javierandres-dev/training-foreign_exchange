@@ -1,4 +1,5 @@
 "use strict";
+// set up the "retail" view
 export default function Retail() {
   const date = new Date().toLocaleString(),
     $retail = document.createElement("table");
@@ -33,7 +34,9 @@ export default function Retail() {
   </tr>
 </tbody>
 <tfoot>
-  <tr><td colspan="4">Last update ${date}</td></tr>
+  <tr>
+    <td colspan="4">Last update ${date}</td>
+  </tr>
 </tfoot>
   `;
   return $retail;

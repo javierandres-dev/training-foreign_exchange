@@ -6,6 +6,7 @@ import Aside from "./components/Aside.js";
 import Nav from "./components/Nav.js";
 import Footer from "./components/Footer.js";
 import Router from "./components/Router.js";
+// call start components and router
 export default function App() {
   const $body = document.querySelector("body");
   $body.innerHTML = null;

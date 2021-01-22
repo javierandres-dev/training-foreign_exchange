@@ -1,6 +1,7 @@
 "use strict";
 import printPrices from "./printPrices.js";
 let flag = 0;
+// set prices according to user inputs
 export default function setPrices() {
   const d = document,
     buyUsd = d.getElementById("buyUsd"),

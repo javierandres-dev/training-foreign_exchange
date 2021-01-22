@@ -4,15 +4,13 @@ SUMMARY
 1. Base
 2. Globals
 3. Helpers
-4. Header
-5. Nav
-6. Footer
-7. Today
-8. History
-9. Exchange
-10. Retail
-11. Media queries
-12. JAGP
+4. Nav
+5. Today
+6. History
+7. Exchange
+8. Retail
+9. Media queries
+10. JAGP
 */
 /* 0. Custom propierties
 ================================ */
@@ -26,6 +24,8 @@ SUMMARY
   --f-size-base: 1.6rem;
   --f-size-l: 1.9rem;
   --f-size-xl: 2.2rem;
+  --f-size-xxl: 4.5rem;
+  --f-size-xxxl: 5.5rem;
   --lightblue: #05a6f1;
   --green: #325654;
   --lightgreen: #bec9b7;
@@ -77,11 +77,21 @@ img {
   max-width: 92%;
   margin: auto;
 }
+.s-title,
 .title {
-  font-size: var(--f-size-l);
   font-weight: var(--f-weight-m);
   text-align: center;
   text-transform: capitalize;
+}
+.s-title {
+  margin: 0;
+  background-color: var(--green);
+  color: var(--light);
+  padding: 1rem;
+  font-size: var(--f-size-xl);
+}
+.title {
+  font-size: var(--f-size-l);
 }
 /* 3. Helpers
 ================================ */
@@ -94,18 +104,7 @@ img {
   width: min(100%, 48rem);
   margin: 1rem auto;
 }
-/* 4. Header
-================================ */
-.ttitle {
-  margin: 0;
-  background-color: var(--green);
-  color: var(--light);
-  padding: 1rem;
-  text-align: center;
-  text-transform: capitalize;
-  font-size: xx-large;
-}
-/* 5. Nav
+/* 4. Nav
 ================================ */
 .nav {
   display: flex;
@@ -115,15 +114,7 @@ img {
 .nav a {
   padding: 1rem;
 }
-/* 6. Footer
-================================ */
-.footer {
-  background-color: var(--green);
-  color: var(--light);
-  text-align: center;
-  padding: 0.1rem;
-}
-/* 7. Today
+/* 5. Today
 ================================ */
 .today {
   text-align: center;
@@ -136,15 +127,14 @@ img {
 }
 .today figure {
   margin: 0;
-  max-width: 10rem;
+  max-width: 12rem;
 }
 .today figcaption {
   font-weight: var(--f-weight-m);
 }
-/* 8. History
+/* 6. History
 ================================ */
 .history {
-  font-size: var(--f-size-s);
   width: min(100%, 48rem);
   margin: auto;
   border-collapse: collapse;
@@ -158,11 +148,12 @@ img {
   text-align: center;
   padding: 0.2rem;
   border-bottom: 0.1rem solid var(--light);
+  font-size: var(--f-size-s);
 }
 .history tr:hover {
   background-color: var(--light);
 }
-/* 9. Exchange
+/* 7. Exchange
 ================================ */
 .exchange {
   width: min(100%, 48rem);
@@ -213,12 +204,10 @@ img {
   color: var(--dark);
   transition: 0.2s ease-in-out;
 }
-/* 10. Retail
+/* 8. Retail
 ================================ */
 .retail {
-  margin: auto;
-  font-size: var(--f-size-s);
-  width: min(100%, 80rem);
+  width: 100%;
   border-collapse: collapse;
 }
 .retail caption {
@@ -231,21 +220,32 @@ img {
 .retail th,
 .retail td {
   text-align: center;
-  padding: 0.5rem;
   border-bottom: 0.1rem solid var(--light);
+  font-size: var(--f-size-s);
+  font-weight: var(--f-weight-m);
+  padding: 0.5rem;
 }
 .retail__flag {
   width: 4rem;
 }
-/* 11. Media queries
+/* 9. Media queries
 ================================ */
 @media screen and (min-width: 480px) {
   .container {
     max-width: 420px;
   }
-  .history,
-  .retail {
+  .history th,
+  .history td {
+    padding: 0.5rem;
     font-size: var(--f-size-base);
+  }
+  .retail th,
+  .retail td {
+    font-size: var(--f-size-base);
+    padding: 1rem;
+  }
+  .retail__flag {
+    width: 6rem;
   }
 }
 @media screen and (min-width: 768px) {
@@ -257,52 +257,55 @@ img {
     justify-content: space-between;
   }
   .today figure {
-    max-width: 12rem;
+    max-width: 14rem;
   }
   .today figcaption {
     font-size: var(--f-size-l);
-  }
-  .history td {
-    padding: 0.5rem;
   }
   .exchange button {
     width: 16rem;
     margin-right: 0;
   }
+  .retail th,
   .retail td {
-    padding: 1rem;
+    font-size: var(--f-size-xl);
   }
   .retail__flag {
-    width: 6rem;
+    width: 8rem;
   }
 }
 @media screen and (min-width: 1024px) {
   .container {
     max-width: 960px;
   }
-  .retail {
-    font-size: var(--f-size-l);
+  .retail th,
+  .retail td {
+    font-size: var(--f-size-xxl);
+    padding: 1.8rem;
   }
   .retail__flag {
-    width: 8rem;
+    width: 10rem;
   }
 }
 @media screen and (min-width: 1200px) {
   .container {
     max-width: 1140px;
   }
-  .retail {
-    font-size: var(--f-size-xl);
-    font-weight: var(--f-weight-m);
+  .retail th,
+  .retail td {
+    font-size: var(--f-size-xxxl);
+    padding: 3.2rem 1.6rem;
   }
   .retail__flag {
-    width: 10rem;
+    width: 12rem;
   }
 }
-/* 12. JAGP
+/* 10. JAGP
 ================================ */
 .jagp {
   margin: 0;
+  font-size: 16px;
+  font-weight: lighter;
   font-family: sans-serif;
   color: gray;
 }
@@ -327,6 +330,7 @@ img {
 .jagp h2 {
   margin: 0;
   font-size: 16px;
+  font-weight: lighter;
   padding: 8px 16px;
 }
 .jagp h1 {

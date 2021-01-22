@@ -1,4 +1,5 @@
 "use strict";
+// show prices established by the user to the public
 export default function printPrices(buyUsd, sellUsd, buyEur, sellEur) {
   location.hash = "#/retail";
   setTimeout(() => {

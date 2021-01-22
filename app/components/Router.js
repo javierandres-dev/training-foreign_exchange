@@ -4,6 +4,7 @@ import History from "./History.js";
 import Exchange from "./Exchange.js";
 import Retail from "./Retail.js";
 import { printTCRMH } from "../helpers/printTCRMH.js";
+// set up the router and set different views
 export default function Router() {
   const { hash } = location,
     $main = document.querySelector("main"),

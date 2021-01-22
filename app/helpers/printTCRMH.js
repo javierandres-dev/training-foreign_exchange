@@ -6,6 +6,7 @@ let tcrmh = undefined,
   items = undefined,
   pages = undefined,
   page = undefined;
+// request and show current TRM
 export async function printTCRMH() {
   tcrmh = await getTCRMH();
   items = tcrmh.length;
@@ -22,6 +23,7 @@ export async function printTCRMH() {
   $date.textContent = `${date}`;
   printHistory(0);
 }
+// show history TRM
 export function printHistory(start) {
   let i = start;
   const end = start + itemsXpage,

@@ -1,4 +1,5 @@
 "use strict";
+// set up the "history" view
 export default function History() {
   const $history = document.createElement("section");
   $history.setAttribute("id", "history");

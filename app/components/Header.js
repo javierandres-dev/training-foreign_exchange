@@ -1,4 +1,5 @@
 "use strict";
+// set up the "header" view
 export default function Header() {
   const $header = document.createElement("header");
   $header.classList.add("jagp");
